@@ -1,8 +1,9 @@
 import SimpleLightbox from 'simplelightbox';
 import 'simplelightbox/dist/simple-lightbox.min.css';
+import Notiflix from 'notiflix';
 import { Loading } from 'notiflix/build/notiflix-loading-aio';
 import { Report } from 'notiflix/build/notiflix-report-aio';
-import { Notify } from 'notiflix/build/notiflix-notify-aio';
+// import { Notify } from 'notiflix/build/notiflix-notify-aio';
 import { createMarkup } from './createGalerryPage';
 import { fetchImgs } from './fetchPage';
 
@@ -33,7 +34,7 @@ async function onFormSubmit(event) {
       if (totalHits === 0) {
         throw new Error('Nothing has defined');
       }
-      Notify.success(`Hooray! We found ${totalHits} images`);
+      Notiflix.Report.info(`Hooray! We found ${totalHits} images`);
       gallery.innerHTML = createMarkup(hits);
       simpleLightbox.refresh();
       event.target.reset();
