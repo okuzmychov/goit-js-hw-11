@@ -1,0 +1,42 @@
+body{
+    background-color: #d2ffc753;
+}
+
+.div_for_form{
+    display: flex;
+    justify-content: center;
+    background-color: #c3ebbe;
+    height:80px;
+    margin-bottom: 11px;
+}
+
+form{
+    margin-top: 32px;
+}
+
+input{
+        border-radius: 5px;
+        border-color: #3c6e55;
+}
+
+button{
+        border-radius: 5px;
+        background-color: #7dce69;
+        border-color: #3c6e55;
+}
+
+.gallery{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+}
+
+a{
+    margin-bottom: 20px;
+        text-decoration: none;
+        color: #3c6e55;
+}
+
+img{
+    width: 400px;
+}
